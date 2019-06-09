@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-en">
+<head>
+    <title>Memory</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" />
+    <meta charset="utf-8" /> 
+    <link rel="stylesheet" type="text/css" href="main.css" />
+    <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css"> 
+    <script type="text/javascript" src="tools.js"></script>
+</head>
+<script>
+    function coverOnTouch(self) {
+        self.hidden = true;
+        document.getElementsByTagName('body')[0].style.overflow = 'visible';
+        document.getElementById('header').hidden = false;
+    }
+    function bodyOnLoad(self) {
+        document.getElementById('header').hidden=true
+        if (document.referrer.indexOf("gitee.com") > -1  || document.referrer.indexOf("github.com") > -1) { 
+            document.getElementById('cover').hidden = true;
+        }
+    }
+</script>
+<body style="overflow:hidden" onload="window.bodyOnLoad(this)">
+    <div onclick="window.coverOnTouch(this)"
+         ontouchstart="window.coverOnTouch(this)" id="cover">
+        <p id="greeting"></p>
+        <img width="100%" height="100%" src="../picture/cover.jpg" alt="cover.jpg" style="z-index:1"/>
+        <script type="text/javascript" src="cover.js"></script>
+    </div>
+    
+    <div>
+        <p class="title">The past is never death.</p>
+        <div class="section">
+            <h3>接口测试搭建&安装依赖包 </h3>
+            <p class="label"><i class="fa fa-paper-plane-o"></i> 2019-3-21 05:48</p>
+            <p>今天给大家推荐一款编辑器微软出品VScode官网地址[https://code.visualstudio.com/]Vscode安装就可以使用比较方便。为什么介绍要搭建接口测试环境呢？在项目中接口测试是投入成本比较低，见效快，收益不错的一种自动化方案，后续可以通过接口测试完成，性能测试（Locust），可以完成接口的监控，接口测试有很多的工具可以完成如：工具本身是有限制的，postman可以使用J</p>
+            <p>It is second paragraph</p>
+            <hr />
+        </div>
+    </div>
+    
+    <div id="header">
+        <script type="text/javascript" src="header.js"></script>
+    </div>
+</body>
+</html>

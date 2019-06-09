@@ -1,0 +1,26 @@
+<!DOCUMENT html>
+<html>
+    <head>
+        <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+        <script src="https://apps.bdimg.com/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+    </head>
+    
+    <body>
+        <p id="main">Hello World</p>
+        <p id="dd"></p>
+    </body>
+    
+    <script>
+        $("#main").click(function(){
+            $(this).animate({marginLeft:"+=500px",
+                             opacity:"0.0"
+                             },5000);
+        });
+        var url = window.location.search.slice(1);
+        str = ''
+        console.log(url.split("%"))
+        if (url.indexOf("hello") != -1) {  //判断是否有参数
+            var str = url.slice(url.indexOf("hello"),url.indexOf("hello")); }
+        console.log(str)
+    </script>
+</html>
